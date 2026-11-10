@@ -70,6 +70,7 @@ Instalación y ejecución:
 Navegador web.
 
 Ejecucion:
+
     1. Clonar el repositorio
     git clone https://github.com/ocho0278/Resgistro_jornada_laboral.git
     cd Resgistro_jornada_laboral
@@ -92,8 +93,10 @@ http://127.0.0.1:8000/
 La documentación interactiva de la API está disponible en:
 http://127.0.0.1:8000/docs
 
-7. Trabajadores de demostración
+Trabajadores de demostración
+
 id - codigo Trabajador - nombretrabajador
+
 1 0180001 Sergio A.
 
 2 0180002 Johana B.
@@ -108,7 +111,8 @@ id - codigo Trabajador - nombretrabajador
 
 Estos códigos se generan al ejecutar database.seed.
 
-8. Uso del sistema
+
+Uso del sistema:
 
 Iniciar jornada:
 Introducir el código del trabajador.
