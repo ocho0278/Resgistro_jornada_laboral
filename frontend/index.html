@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de Jornada Laboral</title>
+
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <header class="encabezado">
+            <h1>Registro de Jornada Laboral</h1>
+            <p>Control de entrada y salida de trabajadores</p>
+        </header>
+
+        <section class="tarjeta">
+
+            <div class="campo">
+                <label for="codigo">Código del trabajador</label>
+
+                <input
+                    type="text"
+                    id="codigo"
+                    placeholder="Ingrese su código"
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="informacion">
+                <p id="nombreTrabajador"></p>
+                <p id="estadoJornada">Sin jornada activa</p>
+            </div>
+
+            <div class="cronometro">
+                <p>Tiempo trabajado</p>
+                <h2 id="tiempo">00:00:00</h2>
+            </div>
+
+            <div class="botones">
+                <button id="btnIniciar" type="button">
+                    Iniciar jornada
+                </button>
+
+                <button id="btnFinalizar" type="button" disabled>
+                    Terminar jornada
+                </button>
+            </div>
+
+            <p id="mensaje" role="status" aria-live="polite"></p>
+
+        </section>
+
+        <footer>
+            <p>Sistema de control de jornadas laborales</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

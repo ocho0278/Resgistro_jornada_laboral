@@ -1,0 +1,204 @@
+/* Variables de diseño */
+:root {
+    --color-primario: #2563eb;
+    --color-secundario: #1e40af;
+    --color-exito: #16a34a;
+    --color-error: #dc2626;
+    --color-fondo: #f1f5f9;
+    --color-texto: #1e293b;
+    --color-borde: #cbd5e1;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 520px;
+    padding: 24px;
+}
+
+/* Encabezado */
+.encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.encabezado h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Tarjeta principal */
+.tarjeta {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Campo del código */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.campo input {
+    padding: 14px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+
+.campo input:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Información del trabajador */
+.informacion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#nombreTrabajador {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#estadoJornada {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Cronómetro */
+.cronometro {
+    text-align: center;
+    margin: 30px 0;
+    padding: 24px;
+    background: #eff6ff;
+    border-radius: 12px;
+}
+
+.cronometro p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+#tiempo {
+    font-size: 44px;
+    font-weight: bold;
+    color: var(--color-primario);
+    margin: 10px 0;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#btnIniciar {
+    background: var(--color-primario);
+    color: white;
+}
+
+#btnIniciar:hover:not(:disabled) {
+    background: var(--color-secundario);
+}
+
+#btnFinalizar {
+    background: var(--color-exito);
+    color: white;
+}
+
+#btnFinalizar:hover:not(:disabled) {
+    background: #15803d;
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* Mensajes */
+#mensaje {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+#mensaje.error {
+    color: var(--color-error);
+}
+
+#mensaje.exito {
+    color: var(--color-exito);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 15px;
+    }
+
+    .tarjeta {
+        padding: 22px;
+    }
+
+    .encabezado h1 {
+        font-size: 23px;
+    }
+
+    #tiempo {
+        font-size: 36px;
+    }
+}

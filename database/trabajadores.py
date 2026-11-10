@@ -62,8 +62,8 @@ def eliminar_trabajador(codigo):
 
 
 if __name__ == "__main__":
-    #registrar_trabajador("0180001", "Sergio A.")
-    #registrar_trabajador("0180002", "Johana B.")
-    #registrar_trabajador("0180003", "Andres C.")
+    # registrar_trabajador("0180001", "Sergio A.")
+    # registrar_trabajador("0180002", "Johana B.")
+    # registrar_trabajador("0180003", "Andres C.")
     #eliminar_trabajador("")
     consultar_trabajadores()

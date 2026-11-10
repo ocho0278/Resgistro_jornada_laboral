@@ -105,6 +105,50 @@ def finalizar_jornada(codigo):
     finally:
         conexion.close()
 
+def consultar_jornada_activa(codigo):
+    conexion = conectar_db()
+
+    try:
+        # Buscar al trabajador mediante su código único
+        trabajador = conexion.execute(
+            """
+            SELECT id, nombre
+            FROM trabajadores
+            WHERE codigo = ?
+            """,
+            (codigo,)
+        ).fetchone()
+
+        if trabajador is None:
+            return {"error": "El trabajador no existe."}
+
+        # Buscar una jornada que todavía no tenga hora de salida
+        jornada = conexion.execute(
+            """
+            SELECT id, hora_entrada
+            FROM jornadas
+            WHERE trabajador_id = ?
+              AND hora_salida IS NULL
+            """,
+            (trabajador["id"],)
+        ).fetchone()
+
+        if jornada is None:
+            return {
+                "trabajador": trabajador["nombre"],
+                "jornada_activa": False
+            }
+
+        return {
+            "trabajador": trabajador["nombre"],
+            "jornada_activa": True,
+            "jornada_id": jornada["id"],
+            "hora_entrada": jornada["hora_entrada"]
+        }
+
+    finally:
+        conexion.close()
+
 if __name__ == "__main__":
 
     codigo = input("Ingrese el código del trabajador: ").strip()
