@@ -218,3 +218,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Bases de datos SQLite
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
