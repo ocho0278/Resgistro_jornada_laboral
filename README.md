@@ -25,15 +25,21 @@ La base de datos contiene dos tablas relacionadas.
 Tabla: trabajadores
 
 id---Identificador interno autoincremental
+
 codigo---Codigo único del trabajador
+
 nombre---Nombre del trabajador
 
 Tabla: jornadas
 
 id---Identificador de la jornada
+
 trabajador_id---Referencia al trabajado
+
 hora_entrada---Fecha y hora de inicio
+
 hora_salida---Fecha y hora de finalización
+
 duracion_segundos---Duración total de la jornada
 
 Manejo de errores
@@ -89,10 +95,15 @@ http://127.0.0.1:8000/docs
 7. Trabajadores de demostración
 id - codigo Trabajador - nombretrabajador
 1 0180001 Sergio A.
+
 2 0180002 Johana B.
+
 3 0180003 Andres C.
+
 4 0180004 Gabriel D.
+
 5 0180005 Lina E.
+
 6 0180006 Roberto F.
 
 Estos códigos se generan al ejecutar database.seed.
